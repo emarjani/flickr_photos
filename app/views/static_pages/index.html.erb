@@ -1,0 +1,13 @@
+<h1>Homepage</h1>
+
+<%=render "user_id_form"%>
+
+<br>
+
+<%unless @list == nil%>
+    <%@list.each do |hash|%>
+        <%=image_tag "http://farm#{hash.farm}.staticflickr.com/#{hash.server}/#{hash.id}_#{hash.secret}.jpg" %>
+        <br>
+    <%end%>
+<%end%>
+
